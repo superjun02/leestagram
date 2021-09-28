@@ -5,6 +5,7 @@
 	<b>비밀번호</b> <input type="password" class="form-control" name="password" placeholder="비밀번호를 입력해주세요" autocomplete="off"><br>
 	<div class="d-flex justify-content-end">
 		<button type="button" class="btn btn-secondary col-4">회원가입</button>
+		<div class="col-1"></div>
 		<button type="button" class="btn btn-info col-4">로그인</button>
 	</div>
 </div>
