@@ -8,14 +8,19 @@ import com.leestagram.user.model.User;
 
 @Service
 public class UserBO {
+
 	@Autowired
-	private UserDAO userDao;
+	private UserDAO userDAO;
 	
-	public boolean existLoginId(String loginId) {
-		return userDao.existLoginId(loginId);
+	public int existLoginId(String loginId) {
+		return userDAO.existLoginId(loginId);
 	}
 	
-	public void addUser(User user) {
-		userDao.insertUser(user);
+	public int insertUser(String loginId, String password, String name, String email) {
+		return userDAO.insertUser(loginId, password, name, email);
+	}
+	
+	public User getUser(String loginId, String password) {
+		return userDAO.selectUserByLoginIdPassword(loginId, password);
 	}
 }

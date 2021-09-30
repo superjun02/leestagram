@@ -1,15 +1,12 @@
 package com.leestagram.user.model;
 
-import java.util.Date;
-
 public class User {
 	private int id;
 	private String loginId;
-	private String name;
 	private String password;
-	private String profileUrl;
-	private Date createdAt;
-	private Date updatedAt;
+	private String name;
+	private String email;
+	
 	public int getId() {
 		return id;
 	}
@@ -22,34 +19,22 @@ public class User {
 	public void setLoginId(String loginId) {
 		this.loginId = loginId;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
 	public String getPassword() {
 		return password;
 	}
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getProfileUrl() {
-		return profileUrl;
+	public String getName() {
+		return name;
 	}
-	public void setProfileUrl(String profileUrl) {
-		this.profileUrl = profileUrl;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public Date getCreatedAt() {
-		return createdAt;
+	public String getEmail() {
+		return email;
 	}
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-	public Date getUpdatedAt() {
-		return updatedAt;
-	}
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }
