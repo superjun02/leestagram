@@ -32,3 +32,14 @@ a:hover { text-decoration:none; color: #000; }
   bottom: 20px;
   left: 20px;
 }
+.textarea-container #file {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.textarea-container #fileName {
+  position: absolute;
+  bottom: 24px;
+  left: 70px;
+}
+

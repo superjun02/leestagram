@@ -23,8 +23,8 @@
 				</div>
 				
 				<%-- btn-block: 로그인 박스 영역에 버튼을 가득 채운다. --%>
-				<a class="btn btn-block btn-dark" href="/user/sign_up_view">회원가입</a>
 				<input type="submit" class="btn btn-block btn-info" value="로그인">
+				<a class="btn btn-block btn-dark" href="/user/sign_up_view">회원가입</a>
 			</form>
 		</div>
 	</div>
