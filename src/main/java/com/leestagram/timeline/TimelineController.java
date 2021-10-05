@@ -22,6 +22,7 @@ public class TimelineController {
 	public String timeline(Model model, HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		
+		
 		Integer userId = (Integer) session.getAttribute("userId");
 		
 		List<Post> postList = postBo.getPostListByUserId(userId);
