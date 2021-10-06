@@ -18,10 +18,10 @@
 		<c:forEach var="post" items="${postList}">
 			<div class="userNameBox bg-info w-100 d-flex justify-content-between mt-4">
 				<div class="pt-2 pb-2 pl-3">
-					<span class="font-weight-bold">${userName}</span>
+					<span class="font-weight-bold">${post.userName}</span>
 				</div>
 				<div class="pr-2 pt-1">
-					<button type="button" class="btn btn-sm btn-info font-weight-bold" >· · ·</button>
+					<button type="button" id="deleteBtn" class="btn btn-sm btn-info font-weight-bold" >· · ·</button>
 				</div>
 			</div>
 			

@@ -9,7 +9,7 @@ import com.leestagram.post.model.Post;
 
 @Repository
 public interface PostDAO {
-	public List<Post> selectPostListByUserId(int userId);
+	public List<Post> selectPostList();
 	
 	public int insertPost(
 			@Param("userId") int userId

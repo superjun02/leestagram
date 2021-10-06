@@ -19,8 +19,8 @@ public class PostBO {
 	@Autowired
 	private FileManagerService fileManagerService;
 	
-	public List<Post> getPostListByUserId(int userId) {
-		return postDao.selectPostListByUserId(userId);
+	public List<Post> getPostList() {
+		return postDao.selectPostList();
 	}
 	
 	public int createPost(int userId, String userLoginId, String userName, String content, MultipartFile file) {
