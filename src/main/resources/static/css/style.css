@@ -42,4 +42,12 @@ a:hover { text-decoration:none; color: #000; }
   bottom: 24px;
   left: 70px;
 }
-
+.replyBox {
+	background-color: #ededed;
+}
+.userNameBox {
+	background-color: #ededed;
+}
+.more-btn {
+	background-color: #ededed;
+}

@@ -23,4 +23,9 @@ public class UserBO {
 	public User getUser(String loginId, String password) {
 		return userDAO.selectUserByLoginIdPassword(loginId, password);
 	}
+
+	public String getUserNameByUserId(int userId) {
+		// TODO Auto-generated method stub
+		return userDAO.selectUserNameByUserId(userId);
+	}
 }

@@ -64,5 +64,44 @@ public class ContentBO {
 		
 		return contentList;
 	}
+
+	public List<Content> getContentList(Integer loginUserId, int userId) {
+List<Content> contentList = new ArrayList<>();
+		
+		List<Post> postList = postBO.getPostListByUserId(userId);
+		
+		// 하나하나씩 postId를 추출해서
+		Iterator<Post> itr = postList.iterator();
+		
+		while (itr.hasNext()) {
+			Content content = new Content();
+			Post post = itr.next();
+			int postId = post.getId();
+			
+			// Post 삽입
+			content.setPost(post);
+			
+			// 코멘트 리스트 삽입
+			List<Comment> commentList = commentBO.getCommentList(postId);
+			content.setCommentList(commentList);
+			
+			// 좋아요 개수 삽입
+			List<Like> likeList = likeBO.getLikeList(postId);
+			
+			int likeCount = likeList.size();
+			
+			content.setLikeCount(likeCount);
+			
+			// 좋아요 상태 삽입
+			if (loginUserId != null) {
+				content.setLikeYn(likeBO.getLikeYn(postId, loginUserId));
+			}
+			
+			
+			contentList.add(content);
+		}
+		
+		return contentList;
+	}
 	
 }
